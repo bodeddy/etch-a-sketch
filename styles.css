@@ -1,3 +1,11 @@
 h1 {
     color:blue;
 }
+
+#container {
+    background-color: darkslategrey;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
