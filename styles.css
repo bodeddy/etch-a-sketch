@@ -1,5 +1,6 @@
 h1 {
     color:blue;
+    text-align: center;
 }
 
 #container {
@@ -8,4 +9,15 @@ h1 {
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    height: 450px;
+    width: 450px;
+    margin: auto;
+}
+
+.grid {
+    height: 100px;
+    width: 100px;
+    flex: 1 0 20%;
+    margin: 5px;
 }
