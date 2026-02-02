@@ -3,21 +3,23 @@ h1 {
     text-align: center;
 }
 
+/* TODO: fix container and grid alignment--see bottom of container and grid*/
+
 #container {
     background-color: darkslategrey;
     color: white;
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     height: 450px;
     width: 450px;
     margin: auto;
+    align-content: center;
+    justify-content: center;
 }
 
 .grid {
-    height: 100px;
-    width: 100px;
-    flex: 1 0 20%;
-    margin: 5px;
+    height: 26px;
+    width: 26px;
+    border: 1px solid black;
 }
