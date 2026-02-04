@@ -5,3 +5,11 @@ for (let i = 0; i < 256; i++) {
     containerDiv.appendChild(gridDiv)
     gridDiv.classList.add("grid");
 };
+
+const gridSquare = document.querySelectorAll(".grid");
+
+gridSquare.forEach((element) => {
+    element.addEventListener("mouseover", () => {
+        element.style.backgroundColor = "red";
+    })    
+})
