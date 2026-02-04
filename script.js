@@ -13,3 +13,11 @@ gridSquare.forEach((element) => {
         element.style.backgroundColor = "red";
     })    
 })
+
+const clearButton = document.querySelector("#clear");
+
+clearButton.addEventListener("click", () => {
+    gridSquare.forEach((element) => {
+        element.style.backgroundColor = "";
+    })
+})
