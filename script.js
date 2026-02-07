@@ -1,43 +1,40 @@
 const gridButton = document.querySelector("#grid-size");
-
-function getUserInput () {
-    let user = prompt("Enter a number: ");
-}
-
-gridButton.addEventListener("click", () => {
-    gridDiv.remove();
-    getUserInput();
-    let userInput = getUserInput();
-    createGrid(userInput);
-});
-
-// container
 const containerDiv = document.querySelector("#container");
+const clearButton = document.querySelector("#clear");
+
 
 function createGrid (num) {
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i < num * num; i++) {
         const gridDiv = document.createElement("div");
         containerDiv.appendChild(gridDiv)
         gridDiv.classList.add("grid");
     }
+
+    const gridSquare = document.querySelectorAll(".grid");
+
+    gridSquare.forEach((element) => {
+        element.addEventListener("mouseover", () => {
+            element.style.backgroundColor = "red";
+        })    
+    })
+
+    clearButton.addEventListener("click", () => {
+        gridSquare.forEach((element) => {
+            element.style.backgroundColor = "";
+        })
+    })
+
 };
 
-createGrid(256);
+createGrid(16);
 
-// grid
-const gridSquare = document.querySelectorAll(".grid");
+function getUserInput () {
+    let user = prompt(Number("Enter a number: "));
+    return user;
+}
 
-gridSquare.forEach((element) => {
-    element.addEventListener("mouseover", () => {
-        element.style.backgroundColor = "red";
-    })    
-})
 
-// clear button
-const clearButton = document.querySelector("#clear");
-
-clearButton.addEventListener("click", () => {
-    gridSquare.forEach((element) => {
-        element.style.backgroundColor = "";
-    })
-})
+gridButton.addEventListener("click", () => {
+    let userInput = getUserInput();
+    createGrid(userInput)
+});
