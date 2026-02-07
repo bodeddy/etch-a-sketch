@@ -1,11 +1,30 @@
+const gridButton = document.querySelector("#grid-size");
+
+function getUserInput () {
+    let user = prompt("Enter a number: ");
+}
+
+gridButton.addEventListener("click", () => {
+    gridDiv.remove();
+    getUserInput();
+    let userInput = getUserInput();
+    createGrid(userInput);
+});
+
+// container
 const containerDiv = document.querySelector("#container");
 
-for (let i = 0; i < 256; i++) {
-    const gridDiv = document.createElement("div");
-    containerDiv.appendChild(gridDiv)
-    gridDiv.classList.add("grid");
+function createGrid (num) {
+    for (let i = 0; i < num; i++) {
+        const gridDiv = document.createElement("div");
+        containerDiv.appendChild(gridDiv)
+        gridDiv.classList.add("grid");
+    }
 };
 
+createGrid(256);
+
+// grid
 const gridSquare = document.querySelectorAll(".grid");
 
 gridSquare.forEach((element) => {
@@ -14,6 +33,7 @@ gridSquare.forEach((element) => {
     })    
 })
 
+// clear button
 const clearButton = document.querySelector("#clear");
 
 clearButton.addEventListener("click", () => {
