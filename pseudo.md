@@ -2,6 +2,10 @@
 
 Build a browser version of something between a sketchpad and an Etch-A-Sketch.
 
+## Create general set up
+
+    Reference a container for the grid and create a grid square
+
 ## Create the initial grid
 
 ### High-level description of routine
