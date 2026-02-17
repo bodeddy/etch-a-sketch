@@ -1,0 +1,11 @@
+#container {
+    height: 450px;
+    width: 450px;
+    background-color: cornflowerblue;
+}
+
+.square {
+    border: 2px, solid, black;
+    height: 50px;
+    width: 50px;
+}
