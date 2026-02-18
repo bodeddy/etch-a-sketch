@@ -8,6 +8,17 @@ function createSquare () {
     const square = document.createElement("div");
     square.classList.add("square");
     container.append(square);
+    square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "red";
+    })
 }
 
-createSquare();
+// This routine creates a default 16x16 grid.
+
+function createGrid (num) {
+    for (let i = 0; i < num * num; i++) {
+        createSquare();
+    }
+}
+
+createGrid(2);
