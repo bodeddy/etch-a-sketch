@@ -1,6 +1,11 @@
+body {
+    box-sizing: border-box;
+}
+
 h1 {
-    color:blue;
+    color: black;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #container {
@@ -12,9 +17,21 @@ h1 {
     width: 450px;
     margin: auto;
     align-content: center;
+    border: 5px solid black;
 }
 
 .grid {
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
