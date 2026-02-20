@@ -34,7 +34,12 @@ createGrid(16);
 
 function getUserInput () {
     let user = prompt("Enter a number: ");
-    return +user;
+    if (+user > 100) {
+        alert("Too big a number!");
+        return 16;
+    } else {
+        return +user;
+    }
 }
 
 gridButton.addEventListener("click", () => {
