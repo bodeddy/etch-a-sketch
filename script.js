@@ -4,21 +4,24 @@
 
 const container = document.querySelector("#container");
 
-function createSquare () {
+for (let i = 0; i < 50; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
     container.append(square);
+
+    const boxSize = 450 / 50;
+    square.style.height = boxSize + "px";
+    square.style.width = boxSize + "px";
+
     square.addEventListener("mouseover", () => {
         square.style.backgroundColor = "red";
     })
+
+    const clearButton = document.querySelector("#clear");
+
+    clearButton.addEventListener("click", () => {
+        square.style.backgroundColor = "";
+    })
 }
 
-// This routine creates a default 16x16 grid.
 
-function createGrid (num) {
-    for (let i = 0; i < num * num; i++) {
-        createSquare();
-    }
-}
-
-createGrid(2);
