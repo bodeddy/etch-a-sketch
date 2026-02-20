@@ -29,8 +29,8 @@ function createGrid (num) {
 createGrid(16);
 
 function getUserInput () {
-    let user = prompt(Number("Enter a number: "));
-    return user;
+    let user = prompt("Enter a number: ");
+    return +user;
 }
 
 
