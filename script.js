@@ -39,5 +39,6 @@ function getUserInput () {
 
 gridButton.addEventListener("click", () => {
     let userInput = getUserInput();
+    containerDiv.replaceChildren();
     createGrid(userInput)
 });
