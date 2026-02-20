@@ -3,11 +3,8 @@ h1 {
     text-align: center;
 }
 
-/* TODO: fix container and grid alignment--see bottom of container and grid*/
-
 #container {
     background-color: darkslategrey;
-    color: white;
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
@@ -15,11 +12,9 @@ h1 {
     width: 450px;
     margin: auto;
     align-content: center;
-    justify-content: center;
 }
 
 .grid {
-    height: 26px;
-    width: 26px;
+    box-sizing: border-box;
     border: 1px solid black;
 }

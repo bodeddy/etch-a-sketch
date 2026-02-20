@@ -8,6 +8,10 @@ function createGrid (num) {
         const gridDiv = document.createElement("div");
         containerDiv.appendChild(gridDiv)
         gridDiv.classList.add("grid");
+
+        const boxSize = 450 / num;
+        gridDiv.style.height = boxSize + "px";
+        gridDiv.style.width = boxSize + "px";
     }
 
     const gridSquare = document.querySelectorAll(".grid");
@@ -32,7 +36,6 @@ function getUserInput () {
     let user = prompt("Enter a number: ");
     return +user;
 }
-
 
 gridButton.addEventListener("click", () => {
     let userInput = getUserInput();
