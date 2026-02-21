@@ -1,3 +1,11 @@
+// https://www.theodinproject.com/lessons/foundations-etch-a-sketch
+
+/*
+https://www.theodinproject.com/lessons/foundations-etch-a-sketch#extra-credit
+
+Still TODO: the Extra credit section. Ran out of steam on this one. 
+*/
+
 const gridButton = document.querySelector("#grid-size");
 const containerDiv = document.querySelector("#container");
 const clearButton = document.querySelector("#clear");
